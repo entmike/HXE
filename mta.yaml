@@ -1,0 +1,40 @@
+ID: Tiny
+_schema-version: '2.0'
+version: 0.0.1
+
+modules:
+ - name: ui
+   type: html5
+   path: ui
+
+ - name: db
+   type: hdb
+   path: db
+   requires:
+    - name: hdi-container
+
+
+
+ - name: tiny2
+   type: hdb
+   path: tiny2
+   requires:
+    - name: hdi-container_2
+
+resources:
+ - name: hdi-container
+   parameters:
+      config:
+         schema: tined
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
+
+ - name: hdi-container_2
+   parameters:
+      config:
+         schema: TESTING
+   properties:
+      hdi-container-name_2: ${service-name}
+   type: com.sap.xs.hdi-container
+

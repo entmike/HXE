@@ -2,7 +2,7 @@ namespace Tiny.db;
 
 context a {
 
-    /*@@layout{"layoutInfo":{"x":45,"y":59.5}}*/
+    /*@@layout{"layoutInfo":{"x":-295,"y":-84.5}}*/
     entity Entity_1 {
         elem_1 : String(10);
     };
